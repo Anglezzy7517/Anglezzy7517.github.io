@@ -1,0 +1,403 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>我的个人博客 - hexo is simple and easy to study</title><meta name="author" content="张正义"><meta name="copyright" content="张正义"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="不知道写什么所以没写...">
+<meta property="og:type" content="website">
+<meta property="og:title" content="我的个人博客">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="我的个人博客">
+<meta property="og:description" content="不知道写什么所以没写...">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s3.ax1x.com/2021/01/11/sGu4EQ.jpg">
+<meta property="article:author" content="张正义">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s3.ax1x.com/2021/01/11/sGu4EQ.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
+
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-02-21 17:01:16'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><link rel="stylesheet" href="/css/iconfont.css"><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="我的个人博客" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" data-lazy-src="https://s3.ax1x.com/2021/01/11/sGu4EQ.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书籍</span></a></li><li><a class="site-page" href="/games/"><i class="fa-fw fas-games"></i><span> 游戏</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://s3.ax1x.com/2021/01/11/s3gH0S.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">我的个人博客</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书籍</span></a></li><li><a class="site-page" href="/games/"><i class="fa-fw fas-games"></i><span> 游戏</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">我的个人博客</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/Anglezzy7517" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:ZZY2387640148@163.com" target="_blank" title="邮箱"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/2387640148" target="_blank" title="QQ:2387640148"><i class="iconfont  icon-ai-qq"></i></a><a class="social-icon" href="/2387640148" target="_blank" title="微信：2387640148"><i class="iconfont  icon-weixin"></i></a><a class="social-icon" href="https://blog.csdn.net/qq_41748057?spm=1011.2124.3001.5343" target="_blank" title="CSDN"><i class="iconfont icon-csdn"></i></a><a class="social-icon" href="https://space.bilibili.com/43140559" target="_blank" title="BiliBili"><i class="iconfont icon-bilibili"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/01/11/%E5%9B%BE%E7%89%87/" title="图集">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/gh/anglezzy7517/image@master/8.6%E6%89%8B%E6%9C%BA%E5%A3%81%E7%BA%B8%20(40).jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="图集"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/11/%E5%9B%BE%E7%89%87/" title="图集">图集</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack article-meta__icon sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-01-11T15:22:37.771Z" title="发表于 2021-01-11 23:22:37">2021-01-11</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%9B%BE%E7%89%87/">图片</a></span></div><div class="content">图片集置顶
+
+
+
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/02/21/wechat/" title="图集">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/gh/anglezzy7517/image@master/hexo/image-20210206104626691.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="图集"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/02/21/wechat/" title="图集">图集</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack article-meta__icon sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-02-21T08:11:18.099Z" title="发表于 2021-02-21 16:11:18">2021-02-21</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a></span></div><div class="content">微信小程序
+
+微信小程序开发文档
+
+
+原生框架 mina框架
+
+小程序与web的区别
+
+
+结构
+web
+小程序
+
+
+
+页面
+HTML
+WSML
+
+
+样式
+CSS
+WXSS
+
+
+逻辑
+Javascript
+Javascript
+
+
+配置
+无
+Json
+
+
+配置文件全局配置 app.json页面pages
+
+显示小程序中拥有的页面路径
+
+
+当我们想要自己去创建一个页面的时候，我们可以直接在配置文件中添加路径并保存，就可以自动的生成页面及其相关配置
+
+
+设置首页面pages中的第一个页面路径就是首页(谁在第一个谁就是首页面)
+开发时,尽量将当前开发的页面设置成首页,因为每次保存后默认都会跳到首页面
+
+
+windowhttps://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#window
+导航栏相关配置
+123456&quot;window&quot;:&#123;  &quot;backgroundTextStyle&quot;:&quot;light&quot;,  &quot;navi ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/02/14/sql%E6%B3%A8%E5%85%A5/" title="sql注入">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/gh/anglezzy7517/image@master/62043036_p0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="sql注入"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/02/14/sql%E6%B3%A8%E5%85%A5/" title="sql注入">sql注入</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-02-14T15:49:30.520Z" title="发表于 2021-02-14 23:49:30">2021-02-14</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/java/">java</a></span></div><div class="content">以前在面试的时候经常会被问到Mybatis中的${}和#{}有什么区别,今天做一下总结。
+首先${}是字符串替换，将${}替换为变量的值；#{}是预编译处理，将#{}替换为？，？相当于占位符，然后调用PreparedStatement的set方法来进行赋值。
+那么问题来了，为什么要出现两种方式呢？
+其目的是${}并不安全，而#{}可以防治sql注入问题，
+使用${}可能会被有心人攻击，通过在前端通过输入一些代码来将sql语句改变，导致服务器压力过大，严重的导致系统崩溃等问题。
+${}是将变量转换为值后将整条sql语句进行编译，而#{}是转为占位符，将sql语句预先编译后再赋值进去。
+通过代码的形式展现
+为了看到sql运行的过程，在yml配置中添加日志配置：
+
+
+${}执行sql语句
+
+
+#{}执行sql语句
+
+
+可以看到#{}替换为占位符，而${}直接将${}替换为了变量的值，可以有效的防治sql注入
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/02/01/md/" title="markdown语法与快捷">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/gh/anglezzy7517/image@master/86986228_p0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="markdown语法与快捷"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/02/01/md/" title="markdown语法与快捷">markdown语法与快捷</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-02-01T11:13:47.202Z" title="发表于 2021-02-01 19:13:47">2021-02-01</time></span></div><div class="content">1hexo不支持md的表情和mermaid
+如果想看完整效果请看我的csdn文档
+:earth_asia: markdown语法与快捷键:1st_place_medal::dart:
+:a: 代码块12//代码块​``` 
+12//bash​```bash
+
+
+1``内容``
+123
+加粗 
+1**内容**
+或ctrl+b
+表单ctrl+t
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+链接ctrl+k
+斜体ctrl+i
+记事本模式ctrl+/
+下划线ctrl+u
+下划线
+关闭ctrl+w
+组合快捷键不知道叫什么
+ctrl+shift+q
+
+ctrl+shift+q
+ 123
+
+ctrl+shift+`
+这个
+图片ctrl+shift+i
+
+打开关闭侧边栏ctrl+shift+l
+编辑侧边栏ctrl+shift+1or2or3
+调整md的大小缩小ctrl+shift+-
+放大ctrl+shift++
+删除线alt+shift+5
+a123
+专注模式F8
+全屏F11
+:call_me_hand: mermaidmermaid参照简书
+https://www.jianshu.com/p/ ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/01/25/git/" title="GitHub学习">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/gh/anglezzy7517/image@master/Screenshot_20210125_000832.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GitHub学习"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/25/git/" title="GitHub学习">GitHub学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-01-24T16:18:30.721Z" title="发表于 2021-01-25 00:18:30">2021-01-25</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Git/">Git</a></span></div><div class="content">
+
+初始化仓库
+1$git init
+添加当前目录下的所有文件到暂存区
+1$git add .
+提交暂存区到本地仓库
+1$git commit -m &quot;注释语句&quot;
+添加远程仓库
+1$git remote add origin 自己的仓库url地址
+合并代码
+1$git pull --rebase origin master
+推送到远程分支
+1$git push -u origin master
+
+
+删除远程地址
+1$git remote rm origin
+查看远程地址
+1$git remote -v
+
+
+git add .
+git commit -m “无”
+git push -u origin master
+分支创建分支1$git branch 分支名
+#常用：创建分支并切换成当前分支1git checkout -b 分支名
+相当于
+123$git branch 分支名 $git checkout 分支名
+查看当前分支1$git branch
+切换分支1$git branch 分支名 
+切换到上一个分支1$git checkout -
+合并分支当我们完成分支后要 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/01/18/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E8%A7%A3%E5%86%B3/" title="github+jsDelivr">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/gh/Anglezzy7517/view@master/84738272_p0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="github+jsDelivr"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/18/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E8%A7%A3%E5%86%B3/" title="github+jsDelivr">github+jsDelivr</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-01-18T13:26:52.508Z" title="发表于 2021-01-18 21:26:52">2021-01-18</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/hexo/">hexo</a></span></div><div class="content">使用七牛云做图床时免费的图床只能储存30天，而且图片在本地localhost:4000中可以显示，但是上传到git上时图片无法显示出来，于是我将图片放到了图床网站上，这又出现了新的问题，我的图片上传到图床网站后图片的加载速度无法保证，而且不便于我们长期的管理与维护，有些图床网站甚至只能存储10md一下的图片，无法存储视频，于是经过考虑我采用了github+jsDelivr+CDN加速的方式来搭建免费的图床。
+1https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;&lt;github用户名&gt;&#x2F;&lt;图床仓库名&gt;@&lt;仓库版本号&gt;&#x2F;图片的路径
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/01/15/hexo%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/" title="hexo文章设置置顶的方法">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/gh/anglezzy7517/image@master/8.6%E6%89%8B%E6%9C%BA%E5%A3%81%E7%BA%B8%20(60).jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo文章设置置顶的方法"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/15/hexo%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/" title="hexo文章设置置顶的方法">hexo文章设置置顶的方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-01-15T03:58:43.170Z" title="发表于 2021-01-15 11:58:43">2021-01-15</time></span></div><div class="content">文章置顶方式找到博客的根目录
+1$ npm uninstall hexo-generator-index --save
+1$ npm install hexo-generator-index-pin-top --save
+在需要置顶的文章中设置top: true
+1234---title: hexo置顶top: true---
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/01/13/jq/" title="jQuery笔记">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/gh/Anglezzy7517/image@master/jq.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="jQuery笔记"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/13/jq/" title="jQuery笔记">jQuery笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-01-13T15:09:41.131Z" title="发表于 2021-01-13 23:09:41">2021-01-13</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span></div><div class="content">js与jQuery入口函数代码：js123windos.onload=function()&#123; //代码&#125;
+jQuery123$(document).ready(function()&#123; //代码&#125;);
+或
+123$(function()&#123; &#x2F;&#x2F;代码&#125;);
+区别：
+jQuery的入口函数是在html所有标签(DOM)都加载之后就会执行，可以执行多次，不会出现覆盖
+JS的windows.onload是等到所有内容都加载完毕后才会执行，只执行一次，如果有新的js入口函数会将前一次的覆盖
+
+jQuery选择器定义：jQuery选择器可以让我们对html中的元素进行操作
+12//语法$()
+元素选择器对html标签进行操作
+获取所有div标签的元素
+1$(&quot;div&quot;)
+获取所有元素
+1$(&quot;*&quot;)
+#id选择器对定义了id的元素进行操作: #
+获取id为a的元素
+1$(&quot;#a&quot;)
+.class选择器对定义了class的元素进行操作
+获取class为b的元素
+1 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/01/11/hello-world%20-%20%E5%89%AF%E6%9C%AC%20(2)/" title="Hexo的建设及踩坑">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/gh/anglezzy7517/image@master/hexo.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo的建设及踩坑"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/11/hello-world%20-%20%E5%89%AF%E6%9C%AC%20(2)/" title="Hexo的建设及踩坑">Hexo的建设及踩坑</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-01-11T15:22:38.810Z" title="发表于 2021-01-11 23:22:38">2021-01-11</time></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/01/07/hello-world/" title="Hello World">     <img class="post_bg" data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/07/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-01-07T10:00:33.350Z" title="发表于 2021-01-07 18:00:33">2021-01-07</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+More info: Writing
+Run server1$ hexo server
+More info: Server
+Generate static files1$ hexo generate
+More info: Generating
+Deploy to remote sites1$ hexo deploy
+More info: Deployment
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="https://s3.ax1x.com/2021/01/11/sGu4EQ.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">张正义</div><div class="author-info__description">不知道写什么所以没写...</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Anglezzy7517" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:ZZY2387640148@163.com" target="_blank" title="邮箱"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/2387640148" target="_blank" title="QQ:2387640148"><i class="iconfont  icon-ai-qq"></i></a><a class="social-icon" href="/2387640148" target="_blank" title="微信：2387640148"><i class="iconfont  icon-weixin"></i></a><a class="social-icon" href="https://blog.csdn.net/qq_41748057?spm=1011.2124.3001.5343" target="_blank" title="CSDN"><i class="iconfont icon-csdn"></i></a><a class="social-icon" href="https://space.bilibili.com/43140559" target="_blank" title="BiliBili"><i class="iconfont icon-bilibili"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">正处于施工阶段！！！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/02/21/wechat/" title="图集"><img data-lazy-src="https://cdn.jsdelivr.net/gh/anglezzy7517/image@master/hexo/image-20210206104626691.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="图集"/></a><div class="content"><a class="title" href="/2021/02/21/wechat/" title="图集">图集</a><time datetime="2021-02-21T08:11:18.099Z" title="发表于 2021-02-21 16:11:18">2021-02-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/14/sql%E6%B3%A8%E5%85%A5/" title="sql注入"><img data-lazy-src="https://cdn.jsdelivr.net/gh/anglezzy7517/image@master/62043036_p0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="sql注入"/></a><div class="content"><a class="title" href="/2021/02/14/sql%E6%B3%A8%E5%85%A5/" title="sql注入">sql注入</a><time datetime="2021-02-14T15:49:30.520Z" title="发表于 2021-02-14 23:49:30">2021-02-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/01/md/" title="markdown语法与快捷"><img data-lazy-src="https://cdn.jsdelivr.net/gh/anglezzy7517/image@master/86986228_p0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="markdown语法与快捷"/></a><div class="content"><a class="title" href="/2021/02/01/md/" title="markdown语法与快捷">markdown语法与快捷</a><time datetime="2021-02-01T11:13:47.202Z" title="发表于 2021-02-01 19:13:47">2021-02-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/25/git/" title="GitHub学习"><img data-lazy-src="https://cdn.jsdelivr.net/gh/anglezzy7517/image@master/Screenshot_20210125_000832.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GitHub学习"/></a><div class="content"><a class="title" href="/2021/01/25/git/" title="GitHub学习">GitHub学习</a><time datetime="2021-01-24T16:18:30.721Z" title="发表于 2021-01-25 00:18:30">2021-01-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/18/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E8%A7%A3%E5%86%B3/" title="github+jsDelivr"><img data-lazy-src="https://cdn.jsdelivr.net/gh/Anglezzy7517/view@master/84738272_p0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="github+jsDelivr"/></a><div class="content"><a class="title" href="/2021/01/18/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E8%A7%A3%E5%86%B3/" title="github+jsDelivr">github+jsDelivr</a><time datetime="2021-01-18T13:26:52.508Z" title="发表于 2021-01-18 21:26:52">2021-01-18</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Git/"><span class="card-category-list-name">Git</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/hexo/"><span class="card-category-list-name">hexo</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/java/"><span class="card-category-list-name">java</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%9B%BE%E7%89%87/"><span class="card-category-list-name">图片</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/"><span class="card-category-list-name">学习</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"><span class="card-category-list-name">微信小程序</span><span class="card-category-list-count">1</span></a></li>
+            
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Git/" style="font-size: 1.1em; color: #999">Git</a> <a href="/tags/hexo/" style="font-size: 1.1em; color: #999">hexo</a> <a href="/tags/jQuery/" style="font-size: 1.1em; color: #999">jQuery</a> <a href="/tags/java/" style="font-size: 1.1em; color: #999">java</a> <a href="/tags/mybatis/" style="font-size: 1.1em; color: #999">mybatis</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 1.1em; color: #999">优化</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 1.1em; color: #999">前端</a> <a href="/tags/%E5%9B%BE%E7%89%87/" style="font-size: 1.1em; color: #999">图片</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 1.5em; color: #99a9bf">学习</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 1.1em; color: #999">工具</a> <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 1.1em; color: #999">微信小程序</a> <a href="/tags/%E7%BD%AE%E9%A1%B6/" style="font-size: 1.1em; color: #999">置顶</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">7</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">10</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-02-21T09:01:16.606Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 张正义</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    var typed = new Typed("#subtitle", {
+      strings: "不要因为别人的一句话就否定自己,自律的人才是最可怕的".split(","),
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = '不要因为别人的一句话就否定自己'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/js/mouse_snow.min.js"></script><script src="js/background.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="true"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body></html>
