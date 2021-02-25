@@ -319,23 +319,23 @@ window.addEventListener('load',()=> {preloader.endLoading()})</script><div class
   function initValine () {
     let initData = {
       el: '#vcomment',
-      appId: 'GylzU3w5oN4Ui1eGsQ0V0nlw-gzGzoHsz',
-      appKey: 'vs80pgHwA6ELxxK9I5rvRXdz',
-      placeholder: '欢迎交流讨论...',
-      avatar: 'mm',
+      appId: 'F49VdG0CXIXr3WCouwj5xwV7-MdYXbMMI',
+      appKey: '0ANDTKS3jzlatLPxjpltxUFB',
+      placeholder: 'Please leave your footprints',
+      avatar: 'retro',
       meta: 'nick,mail,link'.split(','),
       pageSize: '10',
-      lang: '',
-      recordIP: ,
+      lang: 'zh-CN',
+      recordIP: false,
       serverURLs: '',
       emojiCDN: '',
       emojiMaps: "",
-      enableQQ: ,
+      enableQQ: false,
       path: window.location.pathname,
     }
 
-    if (false) { 
-      initData.requiredFields= (''.split(','))
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
     }
     
     if (false) {
@@ -347,7 +347,7 @@ window.addEventListener('load',()=> {preloader.endLoading()})</script><div class
   }
 
   if (typeof Valine === 'function') initValine() 
-  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+  else getScript('//cdn.jsdelivr.net/npm/valine@1.3.4/dist/Valine.min.js').then(initValine)
 }
 
 if ('Valine' === 'Valine' || !false) {
